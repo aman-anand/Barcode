@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/flashButton"
+        android:layout_below="@+id/headerLayout" />
+
+        <Button
+            android:id="@+id/flashButton"
+            android:text="Flash"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/colorToolBar"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/permissionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        >
+
+    <TextView
+        android:id="@+id/permissionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="Need to take Permissions for Camera"/>
+
+    <TextView
+        android:id="@+id/takePermissionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/permissionText"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:layout_centerHorizontal="true"
+        android:text="Click Here to take Permission"/>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

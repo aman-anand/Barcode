@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/textColor"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/back_icon" />
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/backImg"
+                android:textColor="@color/colorWhite"
+
+                android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/deleteImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/shareImg"
+                android:background="@drawable/delete"
+                android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/shareImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/saveImg"
+                android:background="@drawable/share"
+                android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/saveImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/save_icon"
+                android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/l_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Data:  "
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dataET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/typeL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ltype"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Type:  "
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/serial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/descL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeL"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/l_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Description:  "
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/custom_edittext"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".80"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY" />
+
+        <EditText
+            android:id="@+id/ocrData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:minHeight="100dp"
+            android:maxHeight="250dp"
+            android:background="@drawable/custom_edittext_ocr"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:gravity="top"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</LinearLayout>
